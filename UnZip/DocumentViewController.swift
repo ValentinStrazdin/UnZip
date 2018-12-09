@@ -20,14 +20,16 @@ class DocumentViewController: UIViewController {
         guard let fileUrl = document?.fileURL else { return }
         if fileUrl.absoluteString.lowercased().hasSuffix(".zip") {
             let folderName = fileUrl.deletingPathExtension().lastPathComponent
-            let fileName = "\(folderName).tif"
             let documents = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
             let writeUrl = URL(fileURLWithPath: documents).appendingPathComponent(folderName)
             // Unzip
             SSZipArchive.unzipFile(atPath: fileUrl.path, toDestination: writeUrl.path)
-            let imageUrl = writeUrl.appendingPathComponent(fileName)
-            imageView.image = UIImage.init(contentsOfFile: imageUrl.path)
-            self.navigationItem.title = fileName
+            self.navigationItem.title = folderName
+            let ac = UIAlertController.init(title: "UnZip", message: "File was successfully unzipped", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel) {_ in
+                self.dismissDocumentViewController()
+            })
+            self.present(ac, animated: true, completion: nil)
         }
         else {
             // Access the document
