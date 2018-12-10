@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		817103B021BEC851006D6022 /* zip.png in Resources */ = {isa = PBXBuildFile; fileRef = 817103AF21BEC850006D6022 /* zip.png */; };
+		818FD40C21BED6DA005177BE /* UIScrollView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818FD40B21BED6DA005177BE /* UIScrollView+Image.swift */; };
 		81DD565C21BD98EE004EC95C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD565B21BD98EE004EC95C /* AppDelegate.swift */; };
 		81DD566021BD98EE004EC95C /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD565F21BD98EE004EC95C /* DocumentViewController.swift */; };
 		81DD566221BD98EE004EC95C /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD566121BD98EE004EC95C /* Document.swift */; };
@@ -22,6 +23,7 @@
 		45758C625EE211BC688DA5BD /* Pods-UnZip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnZip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnZip/Pods-UnZip.debug.xcconfig"; sourceTree = "<group>"; };
 		529473249CA7F0253DDF78A9 /* Pods-UnZip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnZip.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnZip/Pods-UnZip.release.xcconfig"; sourceTree = "<group>"; };
 		817103AF21BEC850006D6022 /* zip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zip.png; sourceTree = "<group>"; };
+		818FD40B21BED6DA005177BE /* UIScrollView+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Image.swift"; sourceTree = "<group>"; };
 		81DD565821BD98ED004EC95C /* UnZip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnZip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81DD565B21BD98EE004EC95C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81DD565F21BD98EE004EC95C /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				81DD566621BD98F2004EC95C /* Assets.xcassets */,
 				81DD566821BD98F2004EC95C /* LaunchScreen.storyboard */,
 				81DD566B21BD98F2004EC95C /* Info.plist */,
+				818FD40B21BED6DA005177BE /* UIScrollView+Image.swift */,
 			);
 			path = UnZip;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81DD566221BD98EE004EC95C /* Document.swift in Sources */,
+				818FD40C21BED6DA005177BE /* UIScrollView+Image.swift in Sources */,
 				81DD566021BD98EE004EC95C /* DocumentViewController.swift in Sources */,
 				81DD565C21BD98EE004EC95C /* AppDelegate.swift in Sources */,
 			);

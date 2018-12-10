@@ -14,7 +14,12 @@ class DocumentViewController: UIViewController {
     
     private var messageDisplayed: Bool = true
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet var imageWidthConstraint: NSLayoutConstraint!
+    @IBOutlet var imageHeightConstraint: NSLayoutConstraint!
+    
     var document: UIDocument? {
         didSet {
             guard let fileUrl = document?.fileURL else { return }
@@ -47,7 +52,10 @@ class DocumentViewController: UIViewController {
             self.present(ac, animated: true, completion: nil)
         }
         else {
-            self.imageView.image = UIImage.init(contentsOfFile: fileUrl.path)
+            guard let image = UIImage.init(contentsOfFile: fileUrl.path) else { return }
+            self.imageWidthConstraint.constant = image.size.width
+            self.imageHeightConstraint.constant = image.size.height
+            self.scrollView.setupImage(image, for: self.imageView)
             self.navigationItem.title = self.document?.fileURL.lastPathComponent
         }
     }
@@ -72,5 +80,16 @@ extension DocumentViewController: FileExplorerViewControllerDelegate {
         guard let fileURL = urls.first else { return }
         self.document = UIDocument(fileURL: fileURL)
         self.presentedViewController?.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension DocumentViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        self.scrollView.centerContents(for: self.imageView)
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.imageView
     }
 }
