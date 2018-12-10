@@ -12,6 +12,8 @@ import FileExplorer
 
 class DocumentViewController: UIViewController {
     
+    private var messageDisplayed: Bool = true
+    
     @IBOutlet weak var imageView: UIImageView!
     var document: UIDocument? {
         didSet {
@@ -23,6 +25,7 @@ class DocumentViewController: UIViewController {
                 // Unzip
                 SSZipArchive.unzipFile(atPath: fileUrl.path, toDestination: writeUrl.path)
                 self.navigationItem.title = folderName
+                messageDisplayed = false
             }
         }
     }
@@ -36,9 +39,10 @@ class DocumentViewController: UIViewController {
     public func updateView() {
         guard let fileUrl = document?.fileURL else { return }
         if fileUrl.absoluteString.lowercased().hasSuffix(".zip") {
+            guard !self.messageDisplayed else { return }
             let ac = UIAlertController.init(title: "UnZip", message: "File was successfully unzipped", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .cancel) {_ in
-                self.showFileExplorer()
+                self.messageDisplayed = true
             })
             self.present(ac, animated: true, completion: nil)
         }
@@ -50,6 +54,23 @@ class DocumentViewController: UIViewController {
     
     @IBAction func showFileExplorer() {
         let fileExplorer = FileExplorerViewController()
+        fileExplorer.canChooseFiles = true //specify whether user is allowed to choose files
+        fileExplorer.canChooseDirectories = false //specify whether user is allowed to choose directories
+        fileExplorer.allowsMultipleSelection = false //specify whether user is allowed to choose multiple files and/or directories
+        fileExplorer.delegate = self
         self.present(fileExplorer, animated: true, completion: nil)
+    }
+}
+
+extension DocumentViewController: FileExplorerViewControllerDelegate {
+    
+    func fileExplorerViewControllerDidFinish(_ controller: FileExplorerViewController) {
+        print("DidFinish")
+    }
+    
+    func fileExplorerViewController(_ controller: FileExplorerViewController, didChooseURLs urls: [URL]) {
+        guard let fileURL = urls.first else { return }
+        self.document = UIDocument(fileURL: fileURL)
+        self.presentedViewController?.dismiss(animated: true, completion: nil)
     }
 }
