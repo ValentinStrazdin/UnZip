@@ -7,4 +7,5 @@ use_frameworks!
 
 target 'UnZip' do
     	pod 'SSZipArchive'
+        pod 'FileExplorer', :git => 'https://github.com/ValentinStrazdin/FileExplorer'
 end

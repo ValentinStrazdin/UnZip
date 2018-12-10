@@ -7,24 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		817103B021BEC851006D6022 /* zip.png in Resources */ = {isa = PBXBuildFile; fileRef = 817103AF21BEC850006D6022 /* zip.png */; };
 		81DD565C21BD98EE004EC95C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD565B21BD98EE004EC95C /* AppDelegate.swift */; };
-		81DD565E21BD98EE004EC95C /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD565D21BD98EE004EC95C /* DocumentBrowserViewController.swift */; };
 		81DD566021BD98EE004EC95C /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD565F21BD98EE004EC95C /* DocumentViewController.swift */; };
 		81DD566221BD98EE004EC95C /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD566121BD98EE004EC95C /* Document.swift */; };
 		81DD566521BD98EE004EC95C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81DD566321BD98EE004EC95C /* Main.storyboard */; };
 		81DD566721BD98F2004EC95C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81DD566621BD98F2004EC95C /* Assets.xcassets */; };
 		81DD566A21BD98F2004EC95C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81DD566821BD98F2004EC95C /* LaunchScreen.storyboard */; };
 		81DD567421BD9CEF004EC95C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DD567321BD9CEF004EC95C /* libz.tbd */; };
-		81DD567621BD9FC3004EC95C /* zip.png in Resources */ = {isa = PBXBuildFile; fileRef = 81DD567521BD9FC3004EC95C /* zip.png */; };
 		C255AA7F7B6AFE2DFD2D64B6 /* Pods_UnZip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1490CD659872F69EAE90B88 /* Pods_UnZip.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		45758C625EE211BC688DA5BD /* Pods-UnZip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnZip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnZip/Pods-UnZip.debug.xcconfig"; sourceTree = "<group>"; };
 		529473249CA7F0253DDF78A9 /* Pods-UnZip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnZip.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnZip/Pods-UnZip.release.xcconfig"; sourceTree = "<group>"; };
+		817103AF21BEC850006D6022 /* zip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zip.png; sourceTree = "<group>"; };
 		81DD565821BD98ED004EC95C /* UnZip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnZip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81DD565B21BD98EE004EC95C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81DD565D21BD98EE004EC95C /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
 		81DD565F21BD98EE004EC95C /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
 		81DD566121BD98EE004EC95C /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		81DD566421BD98EE004EC95C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,7 +31,6 @@
 		81DD566921BD98F2004EC95C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81DD566B21BD98F2004EC95C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81DD567321BD9CEF004EC95C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		81DD567521BD9FC3004EC95C /* zip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = zip.png; path = ../../../Desktop/zip.png; sourceTree = "<group>"; };
 		B1490CD659872F69EAE90B88 /* Pods_UnZip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnZip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,7 +50,6 @@
 		81DD564F21BD98ED004EC95C = {
 			isa = PBXGroup;
 			children = (
-				81DD567521BD9FC3004EC95C /* zip.png */,
 				81DD565A21BD98ED004EC95C /* UnZip */,
 				81DD565921BD98ED004EC95C /* Products */,
 				81DD567221BD9CEE004EC95C /* Frameworks */,
@@ -71,8 +68,8 @@
 		81DD565A21BD98ED004EC95C /* UnZip */ = {
 			isa = PBXGroup;
 			children = (
+				817103AF21BEC850006D6022 /* zip.png */,
 				81DD565B21BD98EE004EC95C /* AppDelegate.swift */,
-				81DD565D21BD98EE004EC95C /* DocumentBrowserViewController.swift */,
 				81DD565F21BD98EE004EC95C /* DocumentViewController.swift */,
 				81DD566121BD98EE004EC95C /* Document.swift */,
 				81DD566321BD98EE004EC95C /* Main.storyboard */,
@@ -162,7 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81DD566A21BD98F2004EC95C /* LaunchScreen.storyboard in Resources */,
-				81DD567621BD9FC3004EC95C /* zip.png in Resources */,
+				817103B021BEC851006D6022 /* zip.png in Resources */,
 				81DD566721BD98F2004EC95C /* Assets.xcassets in Resources */,
 				81DD566521BD98EE004EC95C /* Main.storyboard in Resources */,
 			);
@@ -178,10 +175,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UnZip/Pods-UnZip-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FileExplorer/FileExplorer.framework",
 				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FileExplorer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +215,6 @@
 			files = (
 				81DD566221BD98EE004EC95C /* Document.swift in Sources */,
 				81DD566021BD98EE004EC95C /* DocumentViewController.swift in Sources */,
-				81DD565E21BD98EE004EC95C /* DocumentBrowserViewController.swift in Sources */,
 				81DD565C21BD98EE004EC95C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UW8Z95Z285;
 				INFOPLIST_FILE = UnZip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UW8Z95Z285;
 				INFOPLIST_FILE = UnZip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
